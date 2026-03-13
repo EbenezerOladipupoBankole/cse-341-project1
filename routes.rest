@@ -1,0 +1,27 @@
+###
+# LOCAL
+###
+
+# Get all contacts
+GET http://localhost:3000/contacts
+
+###
+
+# Get contact by ID
+# @name getOneLocal
+GET http://localhost:3000/contacts/YOUR_CONTACT_ID
+
+
+###
+# PRODUCTION - Replace with your Render URL
+@renderURL = https://your-render-app-name.onrender.com
+###
+
+# Get all contacts from production
+GET {{renderURL}}/contacts
+
+###
+
+# Get contact by ID from production
+# @name getOneProduction
+GET {{renderURL}}/contacts/YOUR_CONTACT_ID
