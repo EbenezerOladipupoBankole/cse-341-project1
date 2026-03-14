@@ -11,6 +11,39 @@ GET http://localhost:3000/contacts
 # @name getOneLocal
 GET http://localhost:3000/contacts/YOUR_CONTACT_ID
 
+###
+
+# Create contact
+POST http://localhost:3000/contacts HTTP/1.1
+content-type: application/json
+
+{
+    "firstName": "Sarah",
+    "lastName": "Birch",
+    "email": "sarah.birch@test.com",
+    "favoriteColor": "Yellow",
+    "birthday": "12/12/20"
+}
+
+###
+
+# PUT contact
+PUT http://localhost:3000/contacts/YOUR_CONTACT_ID HTTP/1.1
+content-type: application/json
+
+{
+    "firstName": "Sarah",
+    "lastName": "Birch",
+    "email": "test@gmail.com",
+    "favoriteColor": "Green",
+    "birthday": "12/12/20"
+}
+
+###
+
+# DELETE contact
+DELETE http://localhost:3000/contacts/YOUR_CONTACT_ID HTTP/1.1
+
 
 ###
 # PRODUCTION - Replace with your Render URL
@@ -25,3 +58,36 @@ GET {{renderURL}}/contacts
 # Get contact by ID from production
 # @name getOneProduction
 GET {{renderURL}}/contacts/YOUR_CONTACT_ID
+
+###
+
+# Create contact production
+POST {{renderURL}}/contacts HTTP/1.1
+content-type: application/json
+
+{
+    "firstName": "Sarah",
+    "lastName": "Birch",
+    "email": "sarah.birch@test.com",
+    "favoriteColor": "Yellow",
+    "birthday": "12/12/20"
+}
+
+###
+
+# PUT contact production
+PUT {{renderURL}}/contacts/YOUR_CONTACT_ID HTTP/1.1
+content-type: application/json
+
+{
+    "firstName": "Sarah",
+    "lastName": "Birch",
+    "email": "test@gmail.com",
+    "favoriteColor": "Green",
+    "birthday": "12/12/20"
+}
+
+###
+
+# DELETE contact production
+DELETE {{renderURL}}/contacts/YOUR_CONTACT_ID HTTP/1.1
